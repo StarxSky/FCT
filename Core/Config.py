@@ -1,3 +1,7 @@
+
+datas_path = str(input('dataset file name :'))
+checkpoints = str(input('checkpoints path:'))
+
 class ResNet_50_old_Config():
     model_num_classes = 100
     dataset_num_classes = 50
@@ -16,7 +20,7 @@ class ResNet_50_old_Config():
     momentum = 0.875
     nesterov = False
     label_smoothing= 0.1
-    output_model_path= "checkpoints/cifar100_old.pt"
+    output_model_path= f"{checkpoints}/cifar100_old.pt"
 
 
 class ResNet_50_new_Config():
@@ -37,7 +41,7 @@ class ResNet_50_new_Config():
     momentum = 0.875
     nesterov = False
     label_smoothing= 0.1
-    output_model_path= "checkpoints/cifar100_new.pt"
+    output_model_path= f"{checkpoints}/cifar100_new.pt"
 
 
 class TS_Config():
@@ -48,12 +52,11 @@ class TS_Config():
     optimizer_algorithm = 'adam'
     optimizer_lr= 0.0005
     weight_decay= 0.000030517578125
-    old_model_path= 'checkpoints/cifar100_old.pt'
-    new_model_path= 'checkpoints/cifar100_new.pt'
-    side_info_model_path= 'checkpoints/imagenet_1000_simclr.pt'  # Comment this line for no side-info experiment.
+    old_model_path= f'{checkpoints}/cifar100_old.pt'
+    new_model_path= f'{checkpoints}/cifar100_new.pt'
+    side_info_model_path= f'{checkpoints}/imagenet_1000_simclr.pt' 
 
-    name= 'cifar100'
-    data_root= 'data_store/cifar-100-python'  # This should contain training and validation dirs.
+    name= 'cifar100'  
     dataset_num_classes= 100  # This is the number of classes to include for training.
     num_workers= 20
     batch_size= 1024
@@ -65,5 +68,5 @@ class TS_Config():
 
     epochs= 80
     switch_mode_to_eval= True
-    output_transformation_path= 'checkpoints/cifar100_transformation.pt'
-    output_transformed_old_model_path= 'checkpoints/cifar100_old_transformed.pt'
+    output_transformation_path= f'{checkpoints}/cifar100_transformation.pt'
+    output_transformed_old_model_path= f'{checkpoints}/cifar100_old_transformed.pt'
