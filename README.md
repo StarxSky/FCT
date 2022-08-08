@@ -1,5 +1,8 @@
-# FCT
+# Forward Compatible Training (FCT)
+
 ![logo-fct](fct_logo.png)
+This repository is a PyTorch implementation of [Forward Compatible Training for Large-Scale Embedding Retrieval Systems](https://arxiv.org/abs/2112.02805) and can be used to reproduce the results in the paper.
+
 - Base on Apple-ml-FCT Changes to the warehouse.
 ```
 Original ownership of the code belongs to 2022 Apple Inc.
