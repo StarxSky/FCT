@@ -14,9 +14,6 @@ from Core.Config import ResNet_50_new_Config
 from torchvision.datasets import CIFAR100
 from typing import Callable, Optional
 
-device = torch.device('cuda') if torch.cuda.is_available() else 'cpu'
-print(device)
-
 
 # 保存图像数据
 def save_pngs(untar_path: str, spilt: str):
