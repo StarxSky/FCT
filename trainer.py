@@ -37,7 +37,7 @@ class BackboneTrainer():
             output, _ = model(images)
             loss = criterion(output, target)
 
-            acc1, acc5 = accuracy(output, target, topk=(1, 5))
+            acc1, acc5 = accuracy(output, target, top_k=(1, 5))
             losses.update(loss.item(), images.size(0))
             top1.update(acc1.item(), images.size(0))
             top5.update(acc5.item(), images.size(0))
@@ -78,7 +78,7 @@ class BackboneTrainer():
 
                 loss = criterion(output, target)
 
-                acc1, acc5 = accuracy(output, target, topk=(1, 5))
+                acc1, acc5 = accuracy(output, target, top_k=(1, 5))
                 losses.update(loss.item(), images.size(0))
                 top1.update(acc1.item(), images.size(0))
                 top5.update(acc5.item(), images.size(0))
