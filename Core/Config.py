@@ -1,6 +1,6 @@
 
 datas_path = str(input('dataset file name :'))
-checkpoints = str(input('checkpoints path:'))
+checkpoints = 'checkpoints'#str(input('checkpoints path:'))
 
 class ResNet_50_old_Config():
     model_num_classes = 100
