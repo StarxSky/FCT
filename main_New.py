@@ -2,6 +2,7 @@ import torch
 
 
 from model import ResNet50
+from Core.Config import datas_path
 from Core.utils import get_policy
 from trainer import BackboneTrainer
 from Core.utils import get_optimizer
@@ -33,7 +34,7 @@ criterion = LabelSmoothing(ResNet_50_new_Config.label_smoothing)
 
 data = SubImageFolder('cifar100',
                       batch_size = ResNet_50_new_Config.batch_size,
-                      data_root = 'data_store\\cifar-100-python',
+                      data_root = datas_path,
                       num_workers=ResNet_50_new_Config.num_workers,
                       num_classes=ResNet_50_new_Config.dataset_num_classes)
 
