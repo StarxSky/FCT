@@ -2,12 +2,13 @@ import os
 import torch
 
 from torch import nn
-from model import MLP_BN_SIDE_PROJECTION
+from Core.Config import datas_path
 from Core.Config import TS_Config
 from Core.utils import get_policy
 from Core.utils import get_optimizer
 from Core.Dataset import SubImageFolder
 from trainer import TransformationTrainer
+from model import MLP_BN_SIDE_PROJECTION
 from Core.Layers import transformation_to_torchscripts
 
 
@@ -29,7 +30,7 @@ optimizer = get_optimizer(model,
 
 data = SubImageFolder('cifar100',
                           batch_size=TS_Config.batch_size,
-                          data_root='data_store\\cifar-100-python',
+                          data_root=datas_path,
                           num_workers=TS_Config.num_workers,
                           num_classes=TS_Config.dataset_num_classes)
 
