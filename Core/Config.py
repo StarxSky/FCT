@@ -1,6 +1,9 @@
+import os 
 
-datas_path = str(input('dataset file name :'))
-checkpoints = 'checkpoints'#str(input('checkpoints path:'))
+datas_path = str(input('dataset file name (eg. : data_store/cifar-100-python):'))# eg. : data_store/cifar-100-python
+os.makedirs('checkpoints', exist_ok=True)
+checkpoints = 'checkpoints'
+
 
 class ResNet_50_old_Config():
     model_num_classes = 100
